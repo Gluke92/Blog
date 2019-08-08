@@ -21,7 +21,6 @@ header * {
 header .logo {
     float: left;
     height: inherit;
-    border: 1px solid red;
     margin-left:2 em;
 }
 
@@ -39,11 +38,37 @@ header ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
-    border: 1px solid red;
 }
 
 header ul li {
     float: left;
+    position: relative;
+}
+
+header ul li ul {
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+}
+
+header ul li a:hover {
+    background: #006669;
+    transition: 0.5s;
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px;
+    background: #ffffff;
+    color: #444;
+}
+
+header ul li ul li a:hover{
+    background: #d5d6d6;
 }
 
 header ul li a {
@@ -51,6 +76,11 @@ header ul li a {
     padding: 21px;
     font-size: 1.1em;
 }
+
+header ul li ul li a.logout {
+    color:red;
+}
+
 header .menu-toggle {
     display: none;
 }
